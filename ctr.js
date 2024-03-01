@@ -6,14 +6,17 @@ const txt = document.querySelector(".quiz")
 const body = document.getElementById("body")
 
 
-
 const questionContainer = document.querySelector(".question-container")
 const themeContainer = document.querySelector(".theme")
 const resultContainer = document.querySelector(".result-contaier")
 
 
 let theme = "";
+let background = "";
 Science.addEventListener("click",() => {
+    background="s-b";
+    body.classList.remove("f-b");
+    body.classList.add("s-b")
     theme = window.scienceQuestions;
     Science.classList.add("hidden");
     maths.classList.add("hidden");
@@ -26,6 +29,9 @@ Science.addEventListener("click",() => {
 })
 
 maths.addEventListener("click",() => {
+    body.classList.remove("f-b");
+    body.classList.add("m-b");
+    background="m-b";
     theme = window.mathsQuestions;
     Science.classList.add("hidden");
     maths.classList.add("hidden");
@@ -37,6 +43,9 @@ maths.addEventListener("click",() => {
     displayQuestion();
 })
 gk.addEventListener("click",() => {
+    body.classList.remove("f-b");
+    body.classList.add("gk-b");
+    background="gk-b";
     theme = window.generalKnowledgeQuestions;
     Science.classList.add("hidden");
     maths.classList.add("hidden");
@@ -48,6 +57,9 @@ gk.addEventListener("click",() => {
     displayQuestion();
 })
 random.addEventListener("click",() => {
+    background="r-b";
+    body.classList.remove("f-b");
+    body.classList.add("r-b");
     theme = window.randomQuestions;
     Science.classList.add("hidden");
     maths.classList.add("hidden");
@@ -69,7 +81,7 @@ let score = 0;
 let round =1;
 
 function displayQuestion() {
-
+     
     let q_type = theme;
     const questions = q_type[currentQuestion];
     questionElement.textContent = questions.question;
@@ -87,79 +99,89 @@ const html = `
     <button class="submit">SUBMIT</button>`;
     optionsElement.insertAdjacentHTML("afterbegin",html);
 
+    function enterEvent(event){
+        if(event.key === "Enter"){
+          round++;
+          console.log(round);
+          round == 21? displayResult() : "" ; 
+          optionsElement.innerHTML = "";
+          currentQuestion++;
+          displayQuestion();
+          body.classList.remove("green");
+          body.classList.remove("red");
+          body.classList.add(background);
+        }
+     }
+
     //Initializing Elements
-    const submit = document.querySelector(".submit")
-    const option1 = document.querySelector(".o1")
-    const option2 = document.querySelector(".o2")
-    const option3 = document.querySelector(".o3")
-    const option4 = document.querySelector(".o4")
+    const submit = document.querySelector(".submit");
+    const option1 = document.querySelector(".o1");
+    const option2 = document.querySelector(".o2");
+    const option3 = document.querySelector(".o3");
+    const option4 = document.querySelector(".o4");
 
-option1.addEventListener("click", () =>{
-    if (option1.value === questions.answer){
-        body.classList.add("green")
-        option1.classList.add("opacity");
+    option1.addEventListener("click", optionEvent);
+    option2.addEventListener("click", optionEvent);
+    option3.addEventListener("click", optionEvent);
+    option4.addEventListener("click", optionEvent);
+    
+    option1.addEventListener("keypress", enterEvent);
+    option2.addEventListener("keypress", enterEvent);
+    option3.addEventListener("keypress", enterEvent);
+    option4.addEventListener("keypress", enterEvent);
+
+    function optionEvent(event) {
+        const clickedOption = event.target;
+        const clickedVal = clickedOption.value;
+        
+        if (clickedVal === questions.answer) {
+            body.classList.remove("s-b","m-b","gk-b","r-b");
+            body.classList.add("green");
+            score++;
+        } else {
+            body.classList.remove("s-b","m-b","gk-b","r-b");
+            body.classList.add("red");
+        }
+        
        
-        score++;
-    }
-    else{
-        body.classList.add("red")
-        option1.classList.add("opacity");
-
-    }
-})
-option2.addEventListener("click", () =>{
-    if (option2.value === questions.answer){
-        body.classList.add("green");
-        option2.classList.add("opacity");
-        score++;
-    }
-    else{
-        body.classList.add("red")
-        option2.classList.add("opacity");
+       //SubmitButton event
+ 
+       submit.addEventListener("click", () => {
         
-    }
-})
-
-option3.addEventListener("click", () =>{
-    if (option3.value === questions.answer){
-        body.classList.add("green");
-        option3.classList.add("opacity");
-        score++;
-    }
-    else{
-        body.classList.add("red")
-        option3.classList.add("opacity");
-    }
-})
-
-option4.addEventListener("click", () =>{
-    if (option4.value === questions.answer){
-        body.classList.add("green");
-        option4.classList.add("opacity");
-        score++;
-    }
-    else{
-        body.classList.add("red")
-        option4.classList.add("opacity");
-    }
-})
-
-    submit.addEventListener("click", () => {
         round++;
-        
+        console.log(round);
+        round == 21? displayResult() : "" ; 
         optionsElement.innerHTML = "";
         currentQuestion++;
         displayQuestion();
         body.classList.remove("green");
         body.classList.remove("red");
-        console.log(round)
-        // if(round == 20){
-        //    let html1 = `
-        //      <div class="result">You have scored <span class="score">${score}</span> out of 20</div>
-        //    `;
-        //    resultContainer.insertAdjacentHTML("afterbegin",html1)
+        body.classList.add(background);
 
-        // }
+        
     })
-}
+    option1.removeEventListener("click", optionEvent);
+    option2.removeEventListener("click", optionEvent);
+    option3.removeEventListener("click", optionEvent);
+    option4.removeEventListener("click", optionEvent);
+    }
+    
+const displayResult = function(){
+body.classList.add(background);
+body.classList.remove("green");
+body.classList.remove("red");
+  questionContainer.innerHTML = "";
+  let html = `
+  <center><div class="quiz1 gap1">Score - (<span class="score">  ${score}  </span>/20)${score <=10? "🙂": ""}${score >9 && score <15? "😍": ""}${score>15? "🥳" :""}</div>
+  <div><button class="back">Back to Home</button></div></center>
+  `;
+  questionContainer.insertAdjacentHTML("afterbegin",html);
+  
+const backBtn = document.querySelector('.back');
 
+    backBtn.addEventListener("click", () =>{
+        location.reload()
+  })
+}
+   
+}
