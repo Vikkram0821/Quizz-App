@@ -9,7 +9,7 @@ const body = document.getElementById("body")
 
 const questionContainer = document.querySelector(".question-container")
 const themeContainer = document.querySelector(".theme")
-
+const resultContainer = document.querySelector(".result-contaier")
 
 
 let theme = "";
@@ -66,6 +66,7 @@ const submitButton = document.querySelector(".submit");
 
 let currentQuestion = 0;
 let score = 0;
+let round =1;
 
 function displayQuestion() {
 
@@ -80,7 +81,7 @@ const html = `
     <input type="submit" value="${questions.options[1]}" class="b o2">
     </div>
     <div class="gap">
-    <input type="submit" value="${questions.options[2]}" class="b 03">
+    <input type="submit" value="${questions.options[2]}" class="b o3">
     <input type="submit" value="${questions.options[3]}" class="b o4">
     </div>
     <button class="submit">SUBMIT</button>`;
@@ -92,33 +93,73 @@ const html = `
     const option2 = document.querySelector(".o2")
     const option3 = document.querySelector(".o3")
     const option4 = document.querySelector(".o4")
-    
-    submit.addEventListener("click", () => {
-        optionsElement.innerHTML = "";
-        currentQuestion++;
-        displayQuestion()
-    })
-    
-    }
-    
 
-function checkAnswer(selected) {
-    const correctAnswer = questions[currentQuestion].answer;
-    if (selectedOption === correctAnswer) {
+option1.addEventListener("click", () =>{
+    if (option1.value === questions.answer){
+        body.classList.add("green")
+        option1.classList.add("opacity");
+       
         score++;
     }
-    currentQuestion++;
-    if (currentQuestion < questions.length) {
-        displayQuestion();
-    } else {
-        showResult();
+    else{
+        body.classList.add("red")
+        option1.classList.add("opacity");
+
     }
+})
+option2.addEventListener("click", () =>{
+    if (option2.value === questions.answer){
+        body.classList.add("green");
+        option2.classList.add("opacity");
+        score++;
+    }
+    else{
+        body.classList.add("red")
+        option2.classList.add("opacity");
+        
+    }
+})
+
+option3.addEventListener("click", () =>{
+    if (option3.value === questions.answer){
+        body.classList.add("green");
+        option3.classList.add("opacity");
+        score++;
+    }
+    else{
+        body.classList.add("red")
+        option3.classList.add("opacity");
+    }
+})
+
+option4.addEventListener("click", () =>{
+    if (option4.value === questions.answer){
+        body.classList.add("green");
+        option4.classList.add("opacity");
+        score++;
+    }
+    else{
+        body.classList.add("red")
+        option4.classList.add("opacity");
+    }
+})
+
+    submit.addEventListener("click", () => {
+        round++;
+        
+        optionsElement.innerHTML = "";
+        currentQuestion++;
+        displayQuestion();
+        body.classList.remove("green");
+        body.classList.remove("red");
+        console.log(round)
+        // if(round == 20){
+        //    let html1 = `
+        //      <div class="result">You have scored <span class="score">${score}</span> out of 20</div>
+        //    `;
+        //    resultContainer.insertAdjacentHTML("afterbegin",html1)
+
+        // }
+    })
 }
 
-function showResult() {
-    quizContainer.style.display = "none";
-    resultElement.textContent = `Your score: ${score} out of ${questions.length}`;
-    resultElement.style.display = "block";
-}
-
-displayQuestion();

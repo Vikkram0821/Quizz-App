@@ -25,8 +25,18 @@ body{
     margin-top: 200px;
     font-family: "Lilita One", sans-serif;
     color: cadetblue;
-
-   
+}
+.score{
+    color: green;
+}
+.opacity{
+    opacity: 50%;
+}
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;
 }
 .theme{
     text-align: center;

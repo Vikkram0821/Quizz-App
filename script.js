@@ -17,7 +17,7 @@ window.scienceQuestions = [
     },
     {
         question: "What is the study of living organisms called?",
-        options: ["Geology", "Botany", "Zoology", "Ecology"],
+        options: ["Geology", "Biology", "Zoology", "Ecology"],
         answer: "Biology"
     },
     {
@@ -107,7 +107,7 @@ window.generalKnowledgeQuestions = [
     {
         question: "What is the capital of France?",
         options: ["London", "Berlin", "Paris", "Madrid"],
-        answer: "Paris"
+        answer: "paris"
     },
     {
         question: "Who wrote 'Romeo and Juliet'?",
