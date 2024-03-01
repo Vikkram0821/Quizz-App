@@ -1,102 +1,102 @@
 // Science Questions
 window.scienceQuestions = [
     {
-        question: "What is the chemical symbol for water?",
+        question: "1) What is the chemical symbol for water?",
         options: ["H2O", "CO2", "NaCl", "O2"],
         answer: "H2O"
     },
     {
-        question: "What is the nearest planet to the Sun?",
+        question: "2) What is the nearest planet to the Sun?",
         options: ["Venus", "Earth", "Mercury", "Mars"],
         answer: "Mercury"
     },
     {
-        question: "What is the chemical symbol for gold?",
+        question: "3) What is the chemical symbol for gold?",
         options: ["Go", "Gr", "Au", "Ag"],
         answer: "Au"
     },
     {
-        question: "What is the study of living organisms called?",
+        question: "4) What is the study of living organisms called?",
         options: ["Geology", "Biology", "Zoology", "Ecology"],
         answer: "Biology"
     },
     {
-        question: "What is the process by which plants make their food called?",
+        question: "5) What is the process by which plants make their food called?",
         options: ["Photosynthesis", "Respiration", "Fermentation", "Transpiration"],
         answer: "Photosynthesis"
     },
     {
-        question: "What gas do plants absorb that humans exhale?",
+        question: "6) What gas do plants absorb that humans exhale?",
         options: ["Nitrogen", "Carbon Dioxide", "Oxygen", "Hydrogen"],
         answer: "Carbon Dioxide"
     },
     {
-        question: "Which scientist proposed the theory of relativity?",
+        question: "7) Which scientist proposed the theory of relativity?",
         options: ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Stephen Hawking"],
         answer: "Albert Einstein"
     },
     {
-        question: "What is the hardest natural substance on Earth?",
+        question: "8) What is the hardest natural substance on Earth?",
         options: ["Diamond", "Steel", "Gold", "Iron"],
         answer: "Diamond"
     },
     {
-        question: "What is the study of earthquakes called?",
+        question: "9) What is the study of earthquakes called?",
         options: ["Seismology", "Meteorology", "Geology", "Astronomy"],
         answer: "Seismology"
     },
     {
-        question: "What is the chemical symbol for iron?",
+        question: "10) What is the chemical symbol for iron?",
         options: ["Fe", "Ir", "In", "I"],
         answer: "Fe"
     },
     {
-        question: "What type of animal is a frog?",
+        question: "11) What type of animal is a frog?",
         options: ["Mammal", "Reptile", "Amphibian", "Bird"],
         answer: "Amphibian"
     },
     {
-        question: "What is the Earth's outermost layer called?",
+        question: "12) What is the Earth's outermost layer called?",
         options: ["Mantle", "Core", "Crust", "Atmosphere"],
         answer: "Crust"
     },
     {
-        question: "What is the name of the galaxy containing our solar system?",
+        question: "13) What is the name of the galaxy containing our solar system?",
         options: ["Andromeda", "Milky Way", "Black Hole", "Whirlpool"],
         answer: "Milky Way"
     },
     {
-        question: "What is the process of a liquid turning into vapor called?",
+        question: "14) What is the process of a liquid turning into vapor called?",
         options: ["Melting", "Freezing", "Condensation", "Evaporation"],
         answer: "Evaporation"
     },
     {
-        question: "What is the chemical symbol for sodium?",
+        question: "15) What is the chemical symbol for sodium?",
         options: ["Sa", "Sd", "So", "Na"],
         answer: "Na"
     },
     {
-        question: "What is the largest organ in the human body?",
+        question: "16) What is the largest organ in the human body?",
         options: ["Brain", "Heart", "Skin", "Liver"],
         answer: "Skin"
     },
     {
-        question: "What is the study of matter and its motion called?",
+        question: "17) What is the study of matter and its motion called?",
         options: ["Biology", "Chemistry", "Physics", "Geology"],
         answer: "Physics"
     },
     {
-        question: "What is the Earth's primary source of energy?",
+        question: "18) What is the Earth's primary source of energy?",
         options: ["Wind", "Water", "Sun", "Coal"],
         answer: "Sun"
     },
     {
-        question: "What is the process by which plants lose water called?",
+        question: "19) What is the process by which plants lose water called?",
         options: ["Transpiration", "Respiration", "Photosynthesis", "Diffusion"],
         answer: "Transpiration"
     },
     {
-        question: "Which planet is known as the 'Red Planet'?",
+        question: "20) Which planet is known as the 'Red Planet'?",
         options: ["Mars", "Venus", "Jupiter", "Mercury"],
         answer: "Mars"
     },
@@ -105,102 +105,102 @@ window.scienceQuestions = [
 // GK Questions
 window.generalKnowledgeQuestions = [
     {
-        question: "What is the capital of France?",
+        question: "1) What is the capital of France?",
         options: ["London", "Berlin", "Paris", "Madrid"],
         answer: "paris"
     },
     {
-        question: "Who wrote 'Romeo and Juliet'?",
+        question: "2) Who wrote 'Romeo and Juliet'?",
         options: ["William Shakespeare", "Jane Austen", "Charles Dickens", "Mark Twain"],
         answer: "William Shakespeare"
     },
     {
-        question: "Which planet is known as the 'Red Planet'?",
+        question: "3) Which planet is known as the 'Red Planet'?",
         options: ["Mars", "Venus", "Jupiter", "Mercury"],
         answer: "Mars"
     },
     {
-        question: "Who painted the 'Mona Lisa'?",
+        question: "4) Who painted the 'Mona Lisa'?",
         options: ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Michelangelo"],
         answer: "Leonardo da Vinci"
     },
     {
-        question: "What is the currency of Japan?",
+        question: "5) What is the currency of Japan?",
         options: ["Yuan", "Yen", "Dollar", "Euro"],
         answer: "Yen"
     },
     {
-        question: "Who was the first President of the United States?",
+        question: "6) Who was the first President of the United States?",
         options: ["Thomas Jefferson", "George Washington", "Abraham Lincoln", "John Adams"],
         answer: "George Washington"
     },
     {
-        question: "Which country is famous for kangaroos?",
+        question: "7) Which country is famous for kangaroos?",
         options: ["Brazil", "Australia", "India", "Canada"],
         answer: "Australia"
     },
     {
-        question: "Who discovered gravity?",
+        question: "8) Who discovered gravity?",
         options: ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Stephen Hawking"],
         answer: "Isaac Newton"
     },
     {
-        question: "What is the national animal of China?",
+        question: "9) What is the national animal of China?",
         options: ["Dragon", "Panda", "Lion", "Tiger"],
         answer: "Panda"
     },
     {
-        question: "Who wrote 'Harry Potter'?",
+        question: "10) Who wrote 'Harry Potter'?",
         options: ["J.K. Rowling", "J.R.R. Tolkien", "George R.R. Martin", "C.S. Lewis"],
         answer: "J.K. Rowling"
     },
     {
-        question: "Which country is known as the 'Land of the Rising Sun'?",
+        question: "11) Which country is known as the 'Land of the Rising Sun'?",
         options: ["China", "Japan", "South Korea", "Thailand"],
         answer: "Japan"
     },
     {
-        question: "What is the chemical symbol for water?",
+        question: "12) What is the chemical symbol for water?",
         options: ["H2O", "CO2", "NaCl", "O2"],
         answer: "H2O"
     },
     {
-        question: "Who wrote 'Hamlet'?",
+        question: "13) Who wrote 'Hamlet'?",
         options: ["William Shakespeare", "Jane Austen", "Charles Dickens", "Mark Twain"],
         answer: "William Shakespeare"
     },
     {
-        question: "Which planet is known as the 'Blue Planet'?",
+        question: "14) Which planet is known as the 'Blue Planet'?",
         options: ["Earth", "Mars", "Venus", "Mercury"],
         answer: "Earth"
     },
     {
-        question: "What is the largest continent by land area?",
+        question: "15) What is the largest continent by land area?",
         options: ["Asia", "Africa", "North America", "Europe"],
         answer: "Asia"
     },
     {
-        question: "What is the capital of Canada?",
+        question: "16) What is the capital of Canada?",
         options: ["Toronto", "Ottawa", "Vancouver", "Montreal"],
         answer: "Ottawa"
     },
     {
-        question: "Who wrote 'Pride and Prejudice'?",
+        question: "17) Who wrote 'Pride and Prejudice'?",
         options: ["Emily Bronte", "Jane Austen", "Charlotte Bronte", "Agatha Christie"],
         answer: "Jane Austen"
     },
     {
-        question: "Which country is famous for the Great Barrier Reef?",
+        question: "18) Which country is famous for the Great Barrier Reef?",
         options: ["Brazil", "Australia", "Indonesia", "Philippines"],
         answer: "Australia"
     },
     {
-        question: "Who is known as the 'Father of Modern Physics'?",
+        question: "19) Who is known as the 'Father of Modern Physics'?",
         options: ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Nikola Tesla"],
         answer: "Albert Einstein"
     },
     {
-        question: "Which planet is known as the 'Morning Star'?",
+        question: "20) Which planet is known as the 'Morning Star'?",
         options: ["Mercury", "Venus", "Mars", "Jupiter"],
         answer: "Venus"
     }

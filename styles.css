@@ -19,7 +19,7 @@ body{
     box-shadow: 1px 1px 1px black;
 }
 .quiz{
-    font-size: 50px;
+    font-size: 80px;
     display: flex;
     justify-content: center;
     margin-top: 200px;
@@ -58,13 +58,22 @@ body{
     margin-right: 300px;
     box-shadow: 2px 1px 2px black;
     background-color: a;
-
+   font-size: 70px;
 }
 .hidden{
     display: none;
 }
+.quit{
+    margin-top: 200px;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    font-family: 'lilita one',sans-serif;
+    font-weight: bolder;
+    border: 1px solid gray;
+    padding: 10px;
+}
 .question{
-    font-size: 35px;
+    font-size: 40px;
     color: white;
     overflow-wrap: break-word;
 }
@@ -89,11 +98,16 @@ body{
     font-size: x-large;
     font-weight: lighter;
     width: 600px;
+    text-align: center;
     font-size: large;
     padding: 10px;
     border-radius: 6px;
     margin-top: 20px;
     background-color: #73b2ff;
+}
+.btn-c{
+    width: auto;
+    overflow: hidden;
 }
 .gap{
     display: flex;

@@ -4,7 +4,7 @@ const gk = document.querySelector(".gk")
 const random = document.querySelector(".random")
 const txt = document.querySelector(".quiz")
 const body = document.getElementById("body")
-
+const quit = document.querySelector(".q")
 
 const questionContainer = document.querySelector(".question-container")
 const themeContainer = document.querySelector(".theme")
@@ -26,6 +26,7 @@ Science.addEventListener("click",() => {
     questionContainer.classList.remove("hidden");
     themeContainer.classList.add("hidden")
     displayQuestion();
+    quit.classList.remove("hidden");
 })
 
 maths.addEventListener("click",() => {
@@ -40,6 +41,8 @@ maths.addEventListener("click",() => {
     txt.classList.add("hidden")
     questionContainer.classList.remove("hidden");
     themeContainer.classList.add("hidden");
+    quit.classList.remove("hidden");
+
     displayQuestion();
 })
 gk.addEventListener("click",() => {
@@ -54,6 +57,8 @@ gk.addEventListener("click",() => {
     txt.classList.add("hidden")
     questionContainer.classList.remove("hidden");
     themeContainer.classList.add("hidden");
+    quit.classList.remove("hidden");
+
     displayQuestion();
 })
 random.addEventListener("click",() => {
@@ -68,9 +73,10 @@ random.addEventListener("click",() => {
     txt.classList.add("hidden")
     questionContainer.classList.remove("hidden");
     themeContainer.classList.add("hidden")
+    quit.classList.remove("hidden");
     displayQuestion();
 })
-
+quit.addEventListener("click", () => location.reload())
 const quizContainer = document.querySelector(".question-container");
 const questionElement = document.querySelector(".question");
 const optionsElement = document.querySelector(".options");
@@ -96,7 +102,8 @@ const html = `
     <input type="submit" value="${questions.options[2]}" class="b o3">
     <input type="submit" value="${questions.options[3]}" class="b o4">
     </div>
-    <button class="submit">SUBMIT</button>`;
+    <div class="btn-c">
+    <button class="submit">SUBMIT</button></div>`;
     optionsElement.insertAdjacentHTML("afterbegin",html);
 
     function enterEvent(event){
