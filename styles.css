@@ -103,24 +103,24 @@ body{
     gap: 7px;
 }
 .f-b{
-    background-image: url(https://wallpapercave.com/wp/wp5569141.jpg);
+    background-image: url(./assets/main.webp);
 }
 .s-b{
-    background-image: url(https://wallpapers.com/images/hd/science-dark-abstract-wave-8vkwk6wjdt8pny6q.jpg);
+    background-image: url(./assets/science.jpg);
     background-position: center; 
     background-size: cover; 
 }
 
 .m-b{
-    background-image: url(https://w0.peakpx.com/wallpaper/816/812/HD-wallpaper-black-chalkboard-mathematics-formula-chalkboard-math.jpg)
+    background-image: url(./assets/maths.jpg)
 }
 .gk-b{
 
-    background-image: url(https://i.pinimg.com/originals/cd/43/95/cd4395e238e4e76887d4c2dbf8c1cdc9.jpg);
+    background-image: url(./assets/gk.jpg);
     background-size: cover; 
 }
 .r-b{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3qPYEt6z0BJS-xtPBzKGy_K2pgauQsyc82i70gtIYUYd_WrQdJ_QsIVoyqH-X6M0Qcbw&usqp=CAU);
+    background-image: url(./assets/random.jpg);
      
 }
 
