@@ -4,8 +4,6 @@ const gk = document.querySelector(".gk")
 const random = document.querySelector(".random")
 const txt = document.querySelector(".quiz")
 const body = document.getElementById("body")
-const quit = document.querySelector(".q")
-
 const questionContainer = document.querySelector(".question-container")
 const themeContainer = document.querySelector(".theme")
 const resultContainer = document.querySelector(".result-contaier")
@@ -26,7 +24,6 @@ Science.addEventListener("click",() => {
     questionContainer.classList.remove("hidden");
     themeContainer.classList.add("hidden")
     displayQuestion();
-    quit.classList.remove("hidden");
 })
 
 maths.addEventListener("click",() => {
@@ -41,7 +38,6 @@ maths.addEventListener("click",() => {
     txt.classList.add("hidden")
     questionContainer.classList.remove("hidden");
     themeContainer.classList.add("hidden");
-    quit.classList.remove("hidden");
 
     displayQuestion();
 })
@@ -57,7 +53,6 @@ gk.addEventListener("click",() => {
     txt.classList.add("hidden")
     questionContainer.classList.remove("hidden");
     themeContainer.classList.add("hidden");
-    quit.classList.remove("hidden");
 
     displayQuestion();
 })
@@ -73,10 +68,11 @@ random.addEventListener("click",() => {
     txt.classList.add("hidden")
     questionContainer.classList.remove("hidden");
     themeContainer.classList.add("hidden")
-    quit.classList.remove("hidden");
     displayQuestion();
 })
-quit.addEventListener("click", () => location.reload())
+
+
+
 const quizContainer = document.querySelector(".question-container");
 const questionElement = document.querySelector(".question");
 const optionsElement = document.querySelector(".options");
@@ -86,8 +82,11 @@ let currentQuestion = 0;
 let score = 0;
 let round =1;
 
+
+
 function displayQuestion() {
-     
+    
+
     let q_type = theme;
     const questions = q_type[currentQuestion];
     questionElement.textContent = questions.question;
@@ -103,8 +102,21 @@ const html = `
     <input type="submit" value="${questions.options[3]}" class="b o4">
     </div>
     <div class="btn-c">
-    <button class="submit">SUBMIT</button></div>`;
+    <button class="submit ">SUBMIT</button>
+    <button class="quit_all submit" style="  color: rgb(255, 255, 255);
+    background-color: black;
+    font-family: 'lilita one',sans-serif;
+    font-weight: bolder;">QUIT</button>
+    </div>
+    
+    `;
+    
     optionsElement.insertAdjacentHTML("afterbegin",html);
+const exit = document.querySelector(".quit_all")
+    
+    exit.addEventListener("click", () =>{
+        location.reload()
+    })
 
     function enterEvent(event){
         if(event.key === "Enter"){

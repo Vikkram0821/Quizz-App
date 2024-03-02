@@ -41,7 +41,7 @@ body{
     opacity: 50%;
 }
 .green{
-    background-color: green;
+    background-color: #00FF00;
 }
 .red{
     background-color: red;
@@ -63,14 +63,21 @@ body{
 .hidden{
     display: none;
 }
-.quit{
-    margin-top: 200px;
-    color: rgb(255, 255, 255);
-    background-color: black;
-    font-family: 'lilita one',sans-serif;
-    font-weight: bolder;
-    border: 1px solid gray;
+
+
+.submit{
+    font-size: x-large;
+    font-weight: lighter;
+    width: 100%;
+    text-align: center;
+    font-size: large;
     padding: 10px;
+    border-radius: 6px;
+    margin-top: 30px;
+    background-color: #73b2ff;
+    margin-left: 0;
+    margin-left: 0;
+
 }
 .question{
     font-size: 40px;
@@ -78,7 +85,7 @@ body{
     overflow-wrap: break-word;
 }
 .question-container{
-   margin-top: 250px;
+   margin-top: 130px;
    margin-left: 450px;
    margin-right: 450px;
 
@@ -86,7 +93,7 @@ body{
 .b{
     cursor: pointer;
     font-size: 25px;
-    width: 300px;
+    width: 50%;
     padding: 10px;
     margin: 10px;
     border-radius: 6px;
@@ -94,20 +101,11 @@ body{
     color: white;
     box-shadow: 1px 1px 3px 1px white;
 }
-.submit{
-    font-size: x-large;
-    font-weight: lighter;
-    width: 600px;
-    text-align: center;
-    font-size: large;
-    padding: 10px;
-    border-radius: 6px;
-    margin-top: 20px;
-    background-color: #73b2ff;
-}
+
 .btn-c{
     width: auto;
     overflow: hidden;
+    display: flexbox;
 }
 .gap{
     display: flex;
@@ -145,4 +143,147 @@ body{
     margin-top: 20px;
     color: white;
     padding: 8px;
+}
+
+@media only screen and (max-width: 1250px) {
+    .quiz{
+        font-size: 45px;
+        box-shadow: 1px 1px 2px 2px white;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 20px;
+     }
+     .question{
+        color: #000000;
+        background-color: white;
+        border: solid 2px black;
+        padding: 5px;
+     }
+     .t-1{
+        display: block;
+        margin-right: 0; 
+     }
+     .t-2{
+        display: block;
+     }
+     .pad{
+        padding: 25px;
+        margin-bottom: 20px;
+     }
+     .theme{
+        padding: 30px;
+        justify-content: center;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 100px; 
+     }
+    .question-container{
+        margin-top: 15%;
+        margin-left: 15px;
+        margin-right: 15px;
+     
+     }
+     .quiz1{
+        font-size: 50px;
+     }
+     .f-b{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlwoy_M-b_ede8ypJA9mwpYS5mwba8fxAU_KpZCdunoy68IXdEdtua8jju-b5RY9F5gWk&usqp=CAU);
+        background-size: cover;
+        background-position: center; 
+    
+     }
+     .s-b{
+        background-image: url(https://as1.ftcdn.net/v2/jpg/00/88/06/46/1000_F_88064612_CwRN7RneNvfozUQcE0otpB9Iu8LqiExl.jpg);
+        background-position: center; 
+        background-size: cover; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+ .quiz{
+    font-size: 45px;
+    box-shadow: 1px 1px 2px 2px white;
+    margin-left: 10%;
+    margin-right: 10%;
+     padding: 20px;
+ }
+  .b{
+    width: 100%;
+    display: block;
+    margin-right: 10px;
+  }
+ .t-1{
+    display: block;
+    margin-right: 0; 
+ }
+ .t-2{
+    display: block;
+ }
+ .pad{
+    padding: 25px;
+    margin-bottom: 20px;
+ }
+ .theme{
+    padding: 30px;
+    justify-content: center;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 100px; 
+ }
+.question-container{
+    margin-top: 45%;
+    margin-left: 15px;
+    margin-right: 15px;
+ 
+ }
+ .f-b{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlwoy_M-b_ede8ypJA9mwpYS5mwba8fxAU_KpZCdunoy68IXdEdtua8jju-b5RY9F5gWk&usqp=CAU);
+    background-size: cover;
+    background-position: center; 
+
+ }
+ .quiz1{
+    font-size: 30px;
+ }
+ .s-b{
+    background-image: url(https://wallpapercave.com/wp/wp10890749.jpg);
+    background-position: center; 
+    background-size: cover; 
+}
+
+}
+
+/* Media queries for mobile devices */
+@media only screen and (max-width: 480px) {
+    .quiz{
+        margin-top: 120px;
+        
+    }
+    .quiz1{
+        font-size: 30px;
+     }
+     .question{
+        color: #ffffff;
+        background-color: black;
+        border: solid 2px rgb(255, 255, 255);
+        padding: 10px;
+     }
+     .b{
+        width: 100%;
+        margin-right: 40px;
+        margin-bottom: 20px;
+
+     }
+     .gap{
+        display: block;
+        justify-content: center;
+        margin-right: 10px;
+
+     }
+     .question-container{
+        margin-top: 40%;
+     }
+
 }
