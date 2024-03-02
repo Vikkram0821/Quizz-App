@@ -3,11 +3,16 @@ const maths = document.querySelector(".maths")
 const gk = document.querySelector(".gk")
 const random = document.querySelector(".random")
 const txt = document.querySelector(".quiz")
-const body = document.getElementById("body")
+const body = document.getElementById("body");
+
 const questionContainer = document.querySelector(".question-container")
 const themeContainer = document.querySelector(".theme")
 const resultContainer = document.querySelector(".result-contaier")
 
+const t1 = document.querySelector(".r1");
+const t2 = document.querySelector(".r2");
+const t3 = document.querySelector(".r3");
+const t4 = document.querySelector(".r4");
 
 let theme = "";
 let background = "";
@@ -16,6 +21,7 @@ Science.addEventListener("click",() => {
     body.classList.remove("f-b");
     body.classList.add("s-b")
     theme = window.scienceQuestions;
+    themeContainer.innerHTML = "";
     Science.classList.add("hidden");
     maths.classList.add("hidden");
     gk.classList.add("hidden");
@@ -31,6 +37,7 @@ maths.addEventListener("click",() => {
     body.classList.add("m-b");
     background="m-b";
     theme = window.mathsQuestions;
+    themeContainer.innerHTML = "";
     Science.classList.add("hidden");
     maths.classList.add("hidden");
     gk.classList.add("hidden");
@@ -45,6 +52,7 @@ gk.addEventListener("click",() => {
     body.classList.remove("f-b");
     body.classList.add("gk-b");
     background="gk-b";
+    themeContainer.innerHTML = "";
     theme = window.generalKnowledgeQuestions;
     Science.classList.add("hidden");
     maths.classList.add("hidden");
@@ -62,6 +70,7 @@ random.addEventListener("click",() => {
     body.classList.add("r-b");
     theme = window.randomQuestions;
     Science.classList.add("hidden");
+    themeContainer.innerHTML = "";
     maths.classList.add("hidden");
     gk.classList.add("hidden");
     random.classList.add("hidden");
